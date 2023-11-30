@@ -1,0 +1,14 @@
+---
+controller_user_data:
+  - username: john
+    password: john123
+    email: john@networknuts.net
+  - username: jane
+    password: jane456
+    email: jane@networknuts.net
+  - username: arthur
+    password: arthur789
+    email: arthur@networknuts.net
+  - username: thomas
+    password: thomas123
+    email: thomas@networknuts.net
