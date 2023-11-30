@@ -2,7 +2,7 @@
 - name: create a single user on AAP
   hosts: localhost
   tasks:
-    - name: create user venkata on AAP
+    - name: create user {{ user_name }} on AAP
       ansible.controller.user:
         username: "{{ user_name }}"
         password: "{{ pass_word }}"
