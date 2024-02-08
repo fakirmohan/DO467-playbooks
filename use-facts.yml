@@ -1,0 +1,8 @@
+---
+- name: use gathered facts
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: display total memory
+      ansible.builtin.debug:
+        msg: "{{ ansible_facts['memtotal_mb'] }}"
