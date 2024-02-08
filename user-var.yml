@@ -1,0 +1,13 @@
+---
+- name: create user with info
+  hosts: all
+  become: true
+  vars:
+    username: anderson
+    userpass: networknuts
+  tasks:
+    - name: create user with password
+      ansible.builtin.user:
+        name: "{{ username }}"
+        password: "{{ userpass | password_hash('sha512') }}"
+        state: present
