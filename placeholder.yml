@@ -1,0 +1,8 @@
+---
+- name: deploy index.html
+  hosts: all
+  tasks:
+    - name: deploy index.html to /var/www/html/
+      ansible.builtin.copy:
+        src: index.html
+        dest: /var/www/html/index.html
