@@ -1,0 +1,8 @@
+---
+- name: install a webserver
+  hosts: all
+  tasks:
+    - name: install httpd
+      ansible.builtin.yum:
+        name: httpd
+        state: present
