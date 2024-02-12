@@ -1,0 +1,12 @@
+---
+- name: configure webserver services
+  hosts: all
+  tasks:
+    - name: start and enable httpd and firewalld
+      ansible.builtin.service:
+        name: "{{ item }}"
+        state: started
+        enabled: true
+      loop:
+        - httpd
+        - firewalld
