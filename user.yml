@@ -1,8 +1,10 @@
 ---
 - name: create simple user
   hosts: all
+  vars:
+    linux_user: john
   tasks:
-    - name: create user john
+    - name: create user {{ linux_user }}
       ansible.builtin.user:
-        name: john
+        name: "{{ linux_user }}"
         state: present
